@@ -14,8 +14,8 @@
 
 <% @movies.each do |movie| %>
 <h4>Movies they've directed:</h4>
-<%= movie.name %>
+<%= link_to movie.name, movie_path(movie) %>
 <br>
 <% end %>
 
-<%= button_to "delete", @director, :method => :delete %>
+<%= button_to "Delete", @director, :method => :delete %>
