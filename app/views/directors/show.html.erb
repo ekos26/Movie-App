@@ -4,6 +4,9 @@
 <%= @director.name %>
 <br>
 
+<%= button_to "Edit", edit_director_path(@director), :method => :get %>
+<br>
+
 <%= label_tag "age:" %>
 <%= @director.age %>
 <br>
@@ -12,10 +15,12 @@
 <%= @director.awards %>
 <br>
 
+<%= button_to "Delete Director", @director, :method => :delete %>
+
 <% @movies.each do |movie| %>
 <h4>Movies they've directed:</h4>
 <%= link_to movie.name, movie_path(movie) %>
 <br>
 <% end %>
 
-<%= button_to "Delete", @director, :method => :delete %>
+<%= button_to "All Directors", directors_path(@director), :method => :get %>

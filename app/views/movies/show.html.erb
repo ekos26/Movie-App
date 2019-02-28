@@ -4,12 +4,17 @@
 <%= @movie.name %>
 <br>
 
+<%= button_to "Edit", edit_movie_path(@movie), :method => :get %>
+<br>
+
 <%= label_tag "year:" %>
 <%= @movie.year %>
 <br>
+
+<%= button_to "Delete Movie", @movie, :method => :delete %>
 
 <%= label_tag "director:" %>
 <%= link_to @movie.director.name, director_path(@movie.director) %>
 <br>
 
-<%= button_to "Delete", @movie, :method => :delete %>
+<%= button_to "All Movies", movies_path(@movie), :method => :get %>

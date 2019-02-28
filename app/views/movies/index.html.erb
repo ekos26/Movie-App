@@ -3,3 +3,5 @@
 <%= link_to movie.name, movie_path(movie) %>
 <br>
 <% end %>
+
+<%= button_to "Add Movie", new_movie_path(@movie), :method => :get %>

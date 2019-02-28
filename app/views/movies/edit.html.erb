@@ -8,7 +8,7 @@
   <%= f.number_field :year %>
 
   <%= f.label :director_id %>
-  <%= f.collection_select(:director_id, @all_directors, :id, :name) %>
+  <%= f.collection_select(:director_id, Director.all, :id, :name) %>
 
   <%= f.submit %>
 

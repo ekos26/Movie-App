@@ -14,7 +14,6 @@ class MoviesController < ApplicationController
 
   def new
     @movie = Movie.new
-    @all_directors = Director.all
   end
 
   def create

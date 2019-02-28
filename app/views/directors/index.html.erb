@@ -3,3 +3,5 @@
 <%= link_to director.name, director_path(director) %>
 <br>
 <% end %>
+
+<%= button_to "Add Director", new_director_path(@director), :method => :get %>
