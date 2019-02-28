@@ -12,5 +12,10 @@
 <%= @director.awards %>
 <br>
 
+<% @movies.each do |movie| %>
+<h4>Movies they've directed:</h4>
+<%= movie.name %>
+<br>
+<% end %>
 
 <%= button_to "delete", @director, :method => :delete %>
