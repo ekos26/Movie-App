@@ -1,0 +1,15 @@
+<h1>🎬Movie🎬</h1>
+
+<%= label_tag "name:" %>
+<%= @movie.name %>
+<br>
+
+<%= label_tag "year:" %>
+<%= @movie.year %>
+<br>
+
+<%= label_tag "director:" %>
+<%= link_to @movie.director.name, director_path(@movie.director) %>
+<br>
+
+<%= button_to "delete", @movie, :method => :delete %>

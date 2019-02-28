@@ -1,0 +1,16 @@
+<h1>🎞Director🎞</h1>
+
+<%= label_tag "name:" %>
+<%= @director.name %>
+<br>
+
+<%= label_tag "age:" %>
+<%= @director.age %>
+<br>
+
+<%= label_tag "awards:" %>
+<%= @director.awards %>
+<br>
+
+
+<%= button_to "delete", @director, :method => :delete %>

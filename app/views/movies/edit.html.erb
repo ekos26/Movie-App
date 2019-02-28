@@ -1,0 +1,15 @@
+<h1>New Movie Form:</h1>
+
+<%= form_for @movie do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :year %>
+  <%= f.number_field :year %>
+
+  <%= f.label :director_id %>
+  <%= f.collection_select(:director_id, @all_directors, :id, :name) %>
+
+  <%= f.submit %>
+
+<% end %>
